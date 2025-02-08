@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Recommendation | PUL079 BEL-CD</title>
+    <link rel="stylesheet" href="./mocktest.css">
+    <!-- Importing Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- Importing Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <!-- Importing Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Importing jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: rgba(245, 86, 81, .7);">
+    <main>
+        <section class="mock-section">
+            <div class="container mt-5">
+                <h5 id="total-time" class="card-text font-weight-bold">CR Recommendation - 079BELCD</h5>
+                <!-- First Page -->
+                <div class="row mb-5 d-flex justify-content-center">
+                    <div class="col-md-8 border p-4" id="mock-div">
+                        <div class="card-body">
+                            <h5 class="card-text float-left font-weight-bold">Recommend Your Choice</h5>
+                            <!-- <h5 class="q-no">Login First</h5> -->
+                        </div>
+                        <hr>
+                        <div class="start_page">
+                            <h3 class="text-center test-title mb-3">Login First</h3>
+                            <p>You have a unique code for login mailed to your campus email.<br>Enter your Full roll no. and login code correctly to login successfully.</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <input type="text" value="" id="voter_logincode" name="enter_code" placeholder="Your Login Code" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <input style="text-transform: uppercase;" type="text" value="" id="voter_name" name="enter_name" placeholder="Your Roll Number" required>
+                                    </div>
+                                    <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <input type="email" value="" id="e_email" name="enter_email" placeholder="Your Email" required>
+                                    </div> -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <button class="d-flex mx-auto mt-4" id="start-btn"><h5>Login</h5></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quiz Page -->
+                        <div id="main">
+                            <form id="hiddenForm" action="https://script.google.com/macros/s/AKfycbzMtqzIkNrToYGdoOKPXzTsBGIWWSIa_8Jr_vXpJd4dl_pnlOWh6PZwetVUHY0oVO89qw/exec" method="post">
+                                <div class="card-body">
+                                    <h5 class="card-text font-weight-bold" id="cVote">Who do you want to vote for C group?</h5>
+                                </div>
+                                <div class="col-md-12 p-4" id="options">
+                                    <input type="text" value="" id="c_Vote" name="C Vote" placeholder="Your Choice" required>
+                                </div>
+                                <input type="hidden" name="Name" value="" id="form_name">
+                                <input type="hidden" name="Login Code" value="" id="login_code">
+                                <div class="card-body">
+                                    <h5 class="card-text font-weight-bold" id="dVote">Who do you want to vote for D group?</h5>
+                                </div>
+                                <div class="col-md-12 p-4" id="options">
+                                    <input type="text" value="" id="d_Vote" name="D Vote" placeholder="Your choice" required>
+                                </div>
+                            </form>
+                            <div class="question-switch p-4">
+                                <button class="btn btn-success float-left" id="vote_submit">Submit Vote</button>
+                                <!-- <button class="btn btn-success float-right" id="next">Next</button> -->
+                                <!-- <button class="btn btn-primary btn-lg mx-auto" id="finish">Finish</button> -->
+                            </div>
+                        </div>
+                        <input type="number" name="state" id="state" value="" style="visibility: hidden;">
+                        <!-- Result Page -->
+                        <!-- <div id="Result">
+                            <h3 class="mt-5 display-4">Marks: <span id="marks"></span>/25</h3>
+                            <h3 class="mt-4"><span id="correct-answer"></span> Correct out of 25</h3>
+                            <h3>Result: <span id="percentage"></span></h3>
+                        </div> -->
+                        <!-- How it works -->
+                        <div style="color: #fff;" class="how-it-works">
+                            <h2>How it works?</h2>
+                            <p>
+                                <ul>
+                                    <li>First you enter your college roll number in the format <b><i>079BEL###</i></b> and an unique login code mailed to your college email id. Please make sure both of them are entered in correctly.</li>
+                                    <li>If your entered details are verified, you're redirected to voting portal where you submit your vote for both groups (C and D).</li>
+                                    <li>Your recommendation is stored here in <a style="text-decoration:none;" href="https://docs.google.com/spreadsheets/d/1W_IxFqc0-J3praJCXpYQiXA8EZrYTb-FdwF-PjOQVq0/edit?usp=sharing">this</a> Google spreadsheet and you can check it. Don't worry, your vote isn't revealed, only your unique id is published in the spreadsheet but not your name.</li>
+                                    <li>Your vote is confidential until you share your login id to your friends.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer-section" id="footer">
+            <div class="container" id="social-link-div">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h3>Get in Touch</h3>
+                        <a href="tel:+9779746838769"><i class="bi bi-telephone"></i> +977 9746838769</a>
+                        <br>
+                        <a href="mailto:079bel070.raunak@pcampus.edu.np"><i class="bi bi-envelope"></i> 079bel070.raunak@pcampus.edu.np</a>
+                        <br>
+                    </div>
+                    <div id="followLinks" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h3>Follow me on</h3>
+                        <a href="https://www.facebook.com/kumarraunak077"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/thisisraunak08/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UChLNiQTld_EJOHaKqB3BDSg/"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    <div class="copyright-section" style="text-align: center; margin-top: 20px;">
+                        <p>© BEL-CD 2079 (Pulchowk Campus). All Rights Reserved. Designed and developed by <a href="https://www.raunakmishra.com.np/">Raunak Kumar</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        $(document).ready(function(){
+            // $('#finish').hide();
+            // $('#Result').hide();
+            $('#main').hide();
+            // $(".q-no").hide();
+            // let state=0;
+            // buttons_manager();
+
+            //Get JSON Questions
+            $('#start-btn').click(function () {
+                if ($('#voter_name').val()==""){
+                    alert("Please enter your name.");
+                } else if ($('#voter_logincode').val() == ""){
+                    alert("Please enter your login code.");
+                }else{
+                    $.ajax({
+                        dataType: "json",
+                        JSONContenttypevalue:  "^application/json$",
+                        beforeSend: function (request) {
+                            request.setRequestHeader("Security-key", "1945");
+                        },
+                        url: "https://json.extendsclass.com/bin/c48d43828250",
+                        success: function(data){
+                            for (i=0; i<48; i++) {
+                                if($('#voter_logincode').val() == data.login_codes[i]){
+                                    // alert(data.names[i]);
+                                    if($('#voter_name').val() == data.names[i]){
+                                        $('#form_name').prop("value", data.names[i]);
+                                        $('#login_code').prop("value", data.login_codes[i]);
+                                        $('#state').prop("value", "1");
+                                        break;
+                                    }
+                                }
+                            }
+                            // alert($('#form_name').val());
+                            if($('#state').val()=="1"){
+                                $('#main').show();
+                                $('.how-it-works').hide();
+                                $('.start_page').hide();
+                                alert("You're logged in successfully!!");
+                            }else if ($('#state').val()=="0"){
+                                $('.start_page').show();
+                                alert("Login Unsuccessfull.... Please enter the valid details.");
+                            }
+                        }
+                    });
+                }
+            });
+
+            $('#vote_submit').click(function(){
+                $('#c_Vote').val=$('#c_name').val();
+                $('#d_Vote').val=$('#d_name').val();
+                // alert($('#form_name').val());
+                // alert($('#login_code').val());
+                // alert($('#c_Vote').val());
+                // alert($('#d_Vote').val());
+                $("#hiddenForm").submit();
+            });
+        });
+    </script>
+</body>
+</html>
