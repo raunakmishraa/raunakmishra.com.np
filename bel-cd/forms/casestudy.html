@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumentation II Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="./assets/images/signature.png" />
+    <!-- Importing Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/unit_converter.css">
+    <!-- Importing Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- Importing Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-custom-dark {
+            background-color: rgb(245, 86, 81); /* Dark background from raunakmishra.com.np */
+        }
+        .text-custom-blue {
+            color: #6ee7b7; /* Teal/Cyan text from raunakmishra.com.np */
+        }
+        .bg-custom-gradient {
+             background: linear-gradient(to right, #000000, #361312); /* Darker gradient */
+        }
+        .btn-custom {
+            background-color: #F55651; /* Button color */
+            color: #ffffff;             /* Dark text color */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header.is-scrolling{
+            background-color: rgba(54, 19, 18, 0.9);
+        }
+        .btn-custom:hover {
+            background-color: rgba(245, 86, 81, 0.75);  /* Slightly darker teal on hover */
+            color: #fff;
+        }
+        #progress-bar {
+            background: linear-gradient(to right, #6ee7b7, #10b981); /* Gradient progress bar */
+        }
+        .title-text{
+            color: #fff !important;
+            font-family: 'Sansita Swashed', cursive;
+        }
+    </style>
+</head>
+<body class="bg-custom-dark flex justify-center items-center min-h-screen">
+    <header id="custom-header">
+        <div class="navbar-container">
+            <h2><b style="color:#fff;"><a href="https://raunakmishra.com.np/">Raunak Mishra</a></b></h2>
+            <nav class="lg-nav">
+                <button id="currency_converter_link" href="#">Case Study Form</button>
+            </nav>
+        </div>
+    </header>
+    <div class="bg-custom-gradient p-8 rounded-lg shadow-md w-full" id="main-box">
+        <h1 class="text-2xl font-semibold text-center mb-6 title-text">Instrumentation II Case Study Group and Industry Division</h1>
+        <div class="mb-4">
+            <p class="text-gray-300 text-center">Fill in the following details.</p>
+        </div>
+        <div class="form-section">
+            <div class="mb-3">
+                <label for="teamName" class="form-label">Team Name</label>
+                <input type="text" class="form-control" id="teamName" placeholder="Your Team Name">
+            </div>
+            <h2 class="member-label">Member 1:</h2>
+            <div class="mb-3">
+                <label for="mem1Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="mem1Name" placeholder="Member 1 Name">
+            </div>
+            <div class="mb-3">
+                <label for="mem1Roll" class="form-label">Roll Number</label>
+                <input type="number" class="form-control" id="mem1Roll" placeholder="Member 1 Roll">
+            </div>
+            <h2 class="member-label">Member 2:</h2>
+            <div class="mb-3">
+                <label for="mem2Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="mem2Name" placeholder="Member 2 Name">
+            </div>
+            <div class="mb-3">
+                <label for="mem2Roll" class="form-label">Roll Number</label>
+                <input type="number" class="form-control" id="mem2Roll" placeholder="Member 2 Roll">
+            </div>
+            <h2 class="member-label">Member 3:</h2>
+            <div class="mb-3">
+                <label for="mem3Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="mem3Name" placeholder="Member 3 Name">
+            </div>
+            <div class="mb-3">
+                <label for="mem3Roll" class="form-label">Roll Number</label>
+                <input type="number" class="form-control" id="mem3Roll" placeholder="Member 3 Roll">
+            </div>
+            <h2 class="member-label">Member 4:</h2>
+            <div class="mb-3">
+                <label for="mem4Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="mem4Name" placeholder="Member 4 Name">
+            </div>
+            <div class="mb-3">
+                <label for="mem4Roll" class="form-label">Roll Number</label>
+                <input type="number" class="form-control" id="mem4Roll" placeholder="Member 4 Roll">
+            </div>
+            <h2 class="member-label">Visit Details:</h2>
+            <div class="mb-3">
+                <label for="industryFixed" class="form-label">Do you have any industry in mind?</label>
+                <select class="form-control" name="industryFixed" id="industryFixed">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="industryName" class="form-label">Industry Name / Type</label>
+                <input type="text" class="form-control" id="industryName" placeholder="Industry Name">
+            </div>
+            <div class="mb-3">
+                <label for="autoIndustry" class="form-label">Are you sure this industry have Automated/Closed Loop Control System?</label>
+                <select class="form-control" name="autoIndustry" id="autoIndustry">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="permissionConfirm" class="form-label">Have you talked to them regarding permissions to visit? Do they permit visits?</label>
+                <select class="form-control" name="permissionConfirm" id="permissionConfirm">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="mt-6">
+            <button id="submit" class="btn-custom">Submit</button>
+        </div>
+        <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSfS2h56QLMiubdlg7afRuGOUgqFs60Ju6u0D3oglSVAerVBDw/formResponse" method="POST" id="actualForm">
+            <input type="hidden" id="entry.559625095" name="entry.559625095" value="">
+            <input type="hidden" id="entry.1148504578" name="entry.1148504578" value="">
+            <input type="hidden" id="entry.171266274" name="entry.171266274" value="">
+            <input type="hidden" id="entry.1073528788" name="entry.1073528788" value="">
+            <input type="hidden" id="entry.2115034643" name="entry.2115034643" value="">
+            <input type="hidden" id="entry.1863473172" name="entry.1863473172" value="">
+            <input type="hidden" id="entry.1858065136" name="entry.1858065136" value="">
+            <input type="hidden" id="entry.1082303760" name="entry.1082303760" value="">
+            <input type="hidden" id="entry.1236109103" name="entry.1236109103" value="">
+            <input type="hidden" id="entry.1858613496" name="entry.1858613496" value="">
+            <input type="hidden" id="entry.924342698" name="entry.924342698" value="">
+            <input type="hidden" id="entry.770026350" name="entry.770026350" value="">
+            <input type="hidden" id="entry.1801972813" name="entry.1801972813" value="">
+        </form>
+        <div class="mt-4 text-center text-sm text-gray-500">
+            <p>Developed by <a style="color: #ffffff;" href="www.raunakmishra.com.np">Raunak Kumar</a></p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            window.addEventListener('scroll', function (e) {
+                if (window.pageYOffset > 100) {
+                    document.querySelector("header").classList.add('is-scrolling');
+                } else {
+                    document.querySelector("header").classList.remove('is-scrolling');
+                }
+            });
+
+            marginHeight = document.getElementById("custom-header").offsetHeight + "px";
+            //console.log(marginHeight);
+            document.getElementById("main-box").style.marginTop = marginHeight;
+            
+            document.getElementById("submit").addEventListener('click', function(e){
+                let details = [];
+                teamname=document.getElementById("teamName");
+                mem1name=document.getElementById("mem1Name");
+                mem1roll=document.getElementById("mem1Roll");
+                mem2name=document.getElementById("mem2Name");
+                mem2roll=document.getElementById("mem2Roll");
+                mem3name=document.getElementById("mem3Name");
+                mem3roll=document.getElementById("mem3Roll");
+                mem4name=document.getElementById("mem4Name");
+                mem4roll=document.getElementById("mem4Roll");
+                industryfixed=document.getElementById("industryFixed");
+                industryname=document.getElementById("industryName");
+                autoindustry=document.getElementById("autoIndustry");
+                permissionconfirm=document.getElementById("permissionConfirm");
+                details.push(teamname.value);
+                details.push(mem1name.value);
+                details.push(mem1roll.value);
+                details.push(mem2name.value);
+                details.push(mem2roll.value);
+                details.push(mem3name.value);
+                details.push(mem3roll.value);
+                details.push(mem4name.value);
+                details.push(mem4roll.value);
+                details.push(industryfixed.value);
+                details.push(industryname.value);
+                details.push(autoindustry.value);
+                details.push(permissionconfirm.value);
+                //console.log(details);
+                //console.log(details[0]);
+                document.getElementById("entry.559625095").value = details[0];
+                document.getElementById("entry.1148504578").value=details[1];
+                document.getElementById("entry.171266274").value=details[2];
+                document.getElementById("entry.1073528788").value=details[3];
+                document.getElementById("entry.2115034643").value=details[4];
+                document.getElementById("entry.1863473172").value=details[5];
+                document.getElementById("entry.1858065136").value=details[6];
+                document.getElementById("entry.1082303760").value=details[7];
+                document.getElementById("entry.1236109103").value=details[8];
+                document.getElementById("entry.1858613496").value=details[9];
+                document.getElementById("entry.924342698").value=details[10];
+                document.getElementById("entry.770026350").value=details[11];
+                document.getElementById("entry.1801972813").value=details[12];
+                //console.log(document.getElementById("entry.559625095").value);
+                document.getElementById("actualForm").submit();
+            });
+        }
+    </script>
+</body>
+</html>
